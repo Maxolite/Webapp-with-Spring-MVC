@@ -8,10 +8,20 @@
 <body>
 <h1>Edit a record</h1>
 
+Id: <h4 th:text="${person.id}"> <b>10 </b></h4>
+Name: <h4 th:text="${person.firstName}"> John </h4>
+Surname: <h4 th:text="${person.lastName}"> Smith </h4>
+
+<hr>
+
 <form action="update" method="post">
-    <div>TODO: display all the data in text fields</div>
+    <input type="hidden" name="id" th:value="${person.id}">
+    Name:<input type="text" name="firstname"> <br>
+    Surname:<input type="text" name="lastname"><br>
     <input type="submit" />
 </form>
+
+<hr>
 
 <a href="list"> Show the list </a>
 
